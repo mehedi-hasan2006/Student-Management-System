@@ -145,13 +145,13 @@ const StudentLoginPage = () => {
       </div>
 
       <h1 className="text-3xl font-bold text-center mb-2 text-gray-900 dark:text-white">
-        Sign in with email
+        Welcome Back 
       </h1>
       <p className="text-center text-gray-600 dark:text-gray-400 mb-8">
-        Make a new doc to bring your words, data, and teams together. For free
+        Login and explore your system 
       </p>
 
-      <form className="space-y-6">
+      <form className="space-y-4">
         {}
         <div className="relative">
           <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400 dark:text-gray-500">

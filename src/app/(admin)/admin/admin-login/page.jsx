@@ -1,6 +1,11 @@
 "use client";
 
+import { Inter } from "next/font/google";
 import React, { useState } from "react";
+
+const inter = Inter({
+  subsets: ["latin"],
+});
 const UserIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -111,10 +116,10 @@ export default function AdminLoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   return (
-    <div className="relative w-full flex items-center justify-center font-sans overflow-hidden mt-5">
-      {}
+    <div
+      className={`relative w-full flex items-center justify-center font-sans overflow-hidden mt-5 ${inter.className}`}
+    >
       <div className="relative w-full max-w-sm p-6 space-y-6 bg-white dark:bg-black rounded-lg border border-zinc-200 dark:border-zinc-800 shadow-lg dark:shadow-zinc-900/50">
-        {}
         <div className="text-center space-y-3">
           <div className="inline-flex p-2 bg-zinc-100 dark:bg-zinc-900 rounded-md border border-zinc-200 dark:border-zinc-800">
             <UserIcon />
@@ -124,7 +129,7 @@ export default function AdminLoginPage() {
               Welcome back
             </h1>
             <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-1">
-              Enter your credentials to sign in
+              Login and manage your students
             </p>
           </div>
         </div>

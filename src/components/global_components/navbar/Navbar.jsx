@@ -111,6 +111,10 @@ const Header = () => {
       href: "/results",
       label: "Results",
     },
+    {
+      href: "/student/student-login",
+      label: "Student Login",
+    },
   ];
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
@@ -145,7 +149,7 @@ const Header = () => {
           {}
           <div className="flex items-center gap-4">
             <Link
-              href="/cr-login"
+              href="/admin/admin-login"
               className="hidden sm:inline-flex items-center justify-center rounded-md text-sm font-medium h-10 px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors duration-300"
             >
               Login
