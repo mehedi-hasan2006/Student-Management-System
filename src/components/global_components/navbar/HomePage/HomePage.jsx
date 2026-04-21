@@ -1,11 +1,22 @@
+import Button from "@/components/ui/button";
 import Link from "next/link";
 import React from "react";
 
 function HomePage() {
   return (
-    <div>
-      {/* <Button variant="secondary">Secondary Button</Button> */}
-      <div className={`container grid grid-cols-3 dark:text-white gap-5 `}>
+    <div className="pb-15">
+      <div className="flex gap-5 justify-center my-8">
+        <Button
+          className="bg-indigo-500 dark:bg-indigo-500 dark:text-white dark:hover:bg-indigo-800"
+          variant="default"
+        >
+          <Link href="/register"> Register </Link>
+        </Button>
+        <Button variant="secondary">
+          <Link href="/student/student-login"> Student Login </Link>
+        </Button>
+      </div>
+      <div className={`container  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 dark:text-white gap-5 px-5`}>
         <div className=" bg-white rounded-xl shadow-md dark:bg-gray-800 p-5 space-y-3">
           <h2 className="text-2xl font-bold ">শিক্ষার্থী তথ্য</h2>
           <p className="dark:text-gray-200">

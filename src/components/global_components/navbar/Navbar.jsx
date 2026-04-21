@@ -5,11 +5,10 @@ import { useTheme } from "next-themes";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 
-
 const inter = Inter({
-  weight: '600',
-  subsets: ['latin'],
-})
+  weight: "600",
+  subsets: ["latin"],
+});
 
 const MenuIcon = ({ className }) => (
   <svg
@@ -120,13 +119,17 @@ const Header = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
   return (
-    <header className={inter.className + " bg-white/80 dark:bg-black/80 backdrop-blur-sm sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-700"}>
+    <header
+      className={
+        inter.className +
+        " bg-white/80 dark:bg-black/80 backdrop-blur-sm sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-700"
+      }
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {}
           <div className="shrink-0">
             <Link href="/" className="flex items-center gap-2">
-            
               <span className="text-lg font-semibold text-gray-900 dark:text-white">
                 Student Management System
               </span>
@@ -139,9 +142,10 @@ const Header = () => {
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-sm font-medium text-gray-500 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300"
+                className="text-sm lg:text-base font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors relative group"
               >
                 {link.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 dark:bg-gray-100 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
           </nav>
